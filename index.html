@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+
     <title>LOTR Quiz</title>
   </head>
   <body class="content">
@@ -197,10 +198,13 @@
             </fieldset>
           </section>
           <section class="quiz__section quiz__section-cta">
-            <button class="quiz__cta">Get Results!</button>
+            <input type="submit" class="quiz__cta" value="Get Results!" />
           </section>
         </div>
       </form>
+      <div class="results">
+        <div class="results__modal"></div>
+      </div>
     </div>
 
     <script src="scripts.js"></script>
