@@ -1,0 +1,65 @@
+.content {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url("./assets/gondor_tree.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: rgba(248, 248, 248, 0.753); */
+}
+
+.page {
+  background-color: rgba(248, 248, 248, 0.753);
+  width: 95vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz {
+  width: 800px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.quiz__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 125px;
+}
+
+.quiz__section-heading {
+  font-size: 2rem;
+  height: 75px;
+  align-items: center;
+}
+
+.quiz__section-cta {
+  align-items: center;
+  height: 100px;
+}
+
+.quiz__cta {
+  height: 50px;
+  width: 25%;
+  background-color: rgba(102, 113, 124, 0.582);
+  border: none;
+  border-radius: 5px;
+}
+
+.quiz__cta:hover {
+  background-color: slategray;
+  color: azure;
+  cursor: pointer;
+}
+
+.quiz__text {
+  font-size: large;
+}
+
+.quiz__radio {
+}

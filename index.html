@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>LOTR Quiz</title>
+  </head>
+  <body class="content">
+    <div class="page">
+      <!-- flex container -->
+      <form method="POST" action="">
+        <div class="quiz">
+          <section class="quiz__section quiz__section-heading">
+            <div class="quiz__heading">Quick Lord of the Rings Quiz</div>
+          </section>
+          <section class="quiz__section">
+            <!-- flex container && flex item -->
+            <span class="quiz__text"
+              >What was the name of Saruman's tower?</span
+            >
+            <fieldset class="quiz__answers">
+              <input
+                class="quiz__radio"
+                name="question_one"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Barad-dûr<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_one"
+                type="radio"
+                value="true"
+              />
+              <label for="question_one">Orthanc<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_one"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Minas Morgul<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_one"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Dol Guldur<br /></label>
+            </fieldset>
+          </section>
+          <section class="quiz__section">
+            <!-- flex container && flex item -->
+            <span class="quiz__text"
+              >What was the name of the main river in the Shire?</span
+            >
+            <fieldset class="quiz__answers">
+              <input
+                class="quiz__radio"
+                name="question_2"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">The Hobbiton<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_2"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">The Shireway<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_2"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">The Anduin<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_2"
+                type="radio"
+                value="true"
+              />
+              <label for="question_one">The Brandywine<br /></label>
+            </fieldset>
+          </section>
+          <section class="quiz__section">
+            <!-- flex container && flex item -->
+            <span class="quiz__text"
+              >Who is commonly said to be the true hero of the Lord of the
+              Rings?</span
+            >
+            <fieldset class="quiz__answers">
+              <input
+                class="quiz__radio"
+                name="question_3"
+                type="radio"
+                value="true"
+              />
+              <label for="question_one">Samwise<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_3"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Aragorn<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_3"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Faramir<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_3"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Gandalf<br /></label>
+            </fieldset>
+          </section>
+          <section class="quiz__section">
+            <!-- flex container && flex item -->
+            <span class="quiz__text"
+              >What creature attacked Frodo and Sam in the mountains of
+              Mordor?</span
+            >
+            <fieldset class="quiz__answers">
+              <input
+                class="quiz__radio"
+                name="question_4"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Orc<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_4"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Nazgûl<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_4"
+                type="radio"
+                value="true"
+              />
+              <label for="question_one">Spider<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_4"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Warg<br /></label>
+            </fieldset>
+          </section>
+          <section class="quiz__section">
+            <!-- flex container && flex item -->
+            <span class="quiz__text"
+              >What beast did Gandalf defeat in the Mines of Moria?</span
+            >
+            <fieldset class="quiz__answers">
+              <input
+                class="quiz__radio"
+                name="question_5"
+                type="radio"
+                value="true"
+              />
+              <label for="question_one">Balrog<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_5"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Dragon<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_5"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Uruk-hi<br /></label>
+              <input
+                class="quiz__radio"
+                name="question_5"
+                type="radio"
+                value="false"
+              />
+              <label for="question_one">Necromancer<br /></label>
+            </fieldset>
+          </section>
+          <section class="quiz__section quiz__section-cta">
+            <button class="quiz__cta">Get Results!</button>
+          </section>
+        </div>
+      </form>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
