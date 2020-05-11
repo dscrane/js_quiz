@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 125px;
+  height: 100px;
 }
 
 .quiz__section-heading {
@@ -57,9 +57,68 @@
   cursor: pointer;
 }
 
+.quiz__answers {
+  height: 35%;
+  border-radius: 5px;
+  border: 1px solid lightslategrey;
+}
+
 .quiz__text {
   font-size: large;
 }
 
 .quiz__radio {
+}
+
+.results__modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  height: 55%;
+  width: 55%;
+  background-color: rgba(169, 169, 169, 0.945);
+  border-radius: 3px;
+}
+
+.results__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.results__row {
+  height: 75px;
+  font-size: 2rem;
+}
+
+.results__row-title {
+  font-size: 2.25rem;
+}
+
+.results__row-close {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+.results__score {
+  font-size: 2rem;
+}
+
+.results__modal-close {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(102, 113, 124, 0.582);
+  border: none;
+  border-radius: 5px;
+}
+
+.results__modal-close:hover {
+  background-color: slategray;
+  color: azure;
+  cursor: pointer;
 }
