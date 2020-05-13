@@ -10,81 +10,16 @@
   <body class="content">
     <div class="page">
       <!-- flex container -->
-      <form method="POST" action="">
-        <div class="quiz">
-          <section class="quiz__section quiz__section-heading">
-            <div class="quiz__heading">Quick Lord of the Rings Quiz</div>
-          </section>
-          <section class="quiz__section">
-            <!-- flex container && flex item -->
-            <label class="quiz__text">
-              What was the name of Saruman's tower?
-            </label>
-            <select class="quiz__answers">
-              <option selected>Choose...</option>
-              <option value="0">Barad-dûr</option>
-              <option value="1">Orthanc</option>
-              <option value="0">Minas Morgul</option>
-              <option value="0">Dol Guldur</option>
-            </select>
-          </section>
-          <section class="quiz__section">
-            <!-- flex container && flex item -->
-            <label class="quiz__text">
-              What was the name of the main river in the Shire?
-            </label>
-            <select class="quiz__answers">
-              <option selected>Choose...</option>
-              <option value="0">The Hobbiton</option>
-              <option value="0">The Anduin</option>
-              <option value="1">The Brandywine</option>
-              <option value="0">The Shireway</option>
-            </select>
-          </section>
-          <section class="quiz__section">
-            <!-- flex container && flex item -->
-            <label class="quiz__text">
-              Who is commonly said to be the true hero of the Lord of the Rings?
-            </label>
-            <select class="quiz__answers">
-              <option selected>Choose...</option>
-              <option value="1">Samwise</option>
-              <option value="0">Aragorn</option>
-              <option value="0">Frodo</option>
-              <option value="0">Gandalf</option>
-            </select>
-          </section>
-          <section class="quiz__section">
-            <!-- flex container && flex item -->
-            <label class="quiz__text">
-              What creature attacked Frodo and Sam in the mountains of Mordor?
-            </label>
-            <select class="quiz__answers">
-              <option selected>Choose...</option>
-              <option value="0">Orc</option>
-              <option value="0">Nazgûl</option>
-              <option value="1">Spider</option>
-              <option value="0">Warg</option>
-            </select>
-          </section>
-          <section class="quiz__section">
-            <!-- flex container && flex item -->
-            <label class="quiz__text">
-              What beast did Gandalf defeat in the Mines of Moria?
-            </label>
-            <select class="quiz__answers">
-              <option default>Choose...</option>
-              <option value="1">Balrog</option>
-              <option value="0">Dragon</option>
-              <option value="0">Uruk-hi</option>
-              <option value="0">Necromancer</option>
-            </select>
-          </section>
-          <section class="quiz__section quiz__section-cta">
-            <input type="submit" class="quiz__cta" value="Get Results!" />
-          </section>
-        </div>
-      </form>
+      <div class="quiz">
+        <section class="quiz__section quiz__section-heading">
+          <div class="quiz__heading">Quick Lord of the Rings Quiz</div>
+        </section>
+        <section class="quiz__section quiz__section-question"></section>
+        <section class="quiz__section quiz__section-ctas">
+          <button class="quiz__cta">Previous</button>
+          <button class="quiz__cta">Next</button>
+        </section>
+      </div>
       <div class="results__modal">
         <div class="results__content">
           <div class="results__row results__row-title">
