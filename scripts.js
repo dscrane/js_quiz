@@ -1,35 +1,27 @@
-//const submitButton = document.querySelector(".quiz__cta");
-const response = document.getElementsByClassName("quiz__answers");
+//  Defined DOM elements used throughout
+// Previous and Next buttons
+const previousButton = document.querySelector(".quiz__cta-previous");
+const nextButton = document.querySelector(".quiz__cta-next");
+// Modal display and interactions
 const modal = document.querySelector(".results__modal");
 const modalScore = document.querySelector(".results__display");
 const modalCloseButton = document.querySelector(".results__modal-close");
+// Quiz content
+const quizContent = document.querySelector(".quiz__section-question");
+// Set variable for page scope
+let currentQuestion = 0;
+let responses = [];
 
-//submitButton.addEventListener("click", formSubmit);
+// Handle modal display
+// Add event listener to modal element
 modalCloseButton.addEventListener("click", closeModal);
-
-function formSubmit(e) {
-  e.preventDefault();
-
-  const quizScore = calcScore(response);
-  modal.style.display = "block";
-  modalScore.innerHTML = `${quizScore}`;
-  console.log(this.state);
-}
-
-function calcScore(response) {
-  let score = 0;
-  for (let res of response) {
-    if (!res.value) return;
-    score = score + parseInt(res.value);
-  }
-
-  return score;
-}
-
+// Function to close the modal
 function closeModal() {
   modal.style.display = "none";
 }
 
+// Handle displaying quiz questions
+// Array of questions to pass to the questionTemplate
 const questions = [
   {
     id: 1,
@@ -63,21 +55,86 @@ const questions = [
   },
 ];
 
-console.log(questions);
-
-const questionTemplate = `
+// Question Template to add to the quiz content
+const questionTemplate = (currentQuestion) => {
+  return `
   <div class="question__img">
-    <img class="question__img-asset" src="${questions[2].src}"></img>
+    <img class="question__img-asset" src="${currentQuestion.src}"></img>
   </div>
-  <div class="question__title">${questions[2].text}</div>
+  <div class="question__title">${currentQuestion.text}</div>
   <div class="question__options">
-    <div class="question__option">${questions[2].options[0]}</div>
-    <div class="question__option">${questions[2].options[1]}</div>
-    <div class="question__option">${questions[2].options[2]}</div>
-    <div class="question__option">${questions[2].options[3]}</div>
+    <div class="question__option">${currentQuestion.options[0]}</div>
+    <div class="question__option">${currentQuestion.options[1]}</div>
+    <div class="question__option">${currentQuestion.options[2]}</div>
+    <div class="question__option">${currentQuestion.options[3]}</div>
   </div>
 `;
+};
 
-console.log(questionTemplate);
+// Display the questionTemplate on the webpage
 
-document.querySelector(".quiz__section-question").innerHTML = questionTemplate;
+// Handle moving between questions with next and previous buttons
+const handleChange = (question) => {
+  switch (question) {
+    case 0:
+      quizContent.innerHTML = `
+        <div class="question__title">
+          Welcome to a quick lord of the rings quiz!
+        </div>`;
+      break;
+    case 1:
+      quizContent.innerHTML = questionTemplate(questions[0]);
+      break;
+    case 2:
+      quizContent.innerHTML = questionTemplate(questions[1]);
+      break;
+    case 3:
+      quizContent.innerHTML = questionTemplate(questions[2]);
+      break;
+    case 4:
+      quizContent.innerHTML = questionTemplate(questions[3]);
+      break;
+    case 5:
+      quizContent.innerHTML = questionTemplate(questions[4]);
+      break;
+    case 6:
+      modal.style.display = "block";
+      break;
+  }
+};
+
+// Initialize switch for case 0
+handleChange(currentQuestion);
+
+// increment current question when next button is clicked
+nextButton.addEventListener("click", () => {
+  currentQuestion > 6
+    ? (currentQuestion = 6)
+    : (currentQuestion = currentQuestion + 1);
+  console.log(currentQuestion);
+  handleChange(currentQuestion);
+  handleResponses();
+});
+// decrement current question when previous button is clicked
+previousButton.addEventListener("click", () => {
+  currentQuestion <= 0
+    ? (currentQuestion = 0)
+    : (currentQuestion = currentQuestion - 1);
+  console.log(currentQuestion);
+  handleChange(currentQuestion);
+  handleResponses();
+});
+
+// Handle selecting an option for each question
+function handleResponses() {
+  responses = document.querySelectorAll(".question__option");
+  responses.forEach((button) => {
+    console.log(button.classList);
+    button.addEventListener("click", setSelectedOption);
+  });
+}
+console.log("responseButton", responses);
+function setSelectedOption() {
+  console.log(this);
+  this.classList.add("question__option-selected");
+}
