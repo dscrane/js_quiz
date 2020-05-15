@@ -50,6 +50,20 @@
   height: 15%;
 }
 
+.quiz__cta {
+  height: 50px;
+  width: 25%;
+  background-color: rgba(102, 113, 124, 0.582);
+  border: none;
+  border-radius: 5px;
+}
+
+.quiz__cta:hover {
+  background-color: slategray;
+  color: azure;
+  cursor: pointer;
+}
+
 .question__img {
   display: flex;
   justify-content: center;
@@ -96,18 +110,8 @@
   background-color: rgba(131, 142, 153, 0.815);
 }
 
-.quiz__cta {
-  height: 50px;
-  width: 25%;
-  background-color: rgba(102, 113, 124, 0.582);
-  border: none;
-  border-radius: 5px;
-}
-
-.quiz__cta:hover {
-  background-color: slategray;
-  color: azure;
-  cursor: pointer;
+.question__radio {
+  visibility: hidden;
 }
 
 .results__modal {
